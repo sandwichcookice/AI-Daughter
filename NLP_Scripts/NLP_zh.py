@@ -6,13 +6,19 @@ import spacy
 # zh_core_web_trf 中文
 # en_core_web_trf
 
-nlp = spacy.load("zh_core_web_trf")
+nlp = spacy.load("zh_core_web_sm")
 
 spacy.prefer_gpu()
 
 def process_text(text):
     doc = nlp(text)
-    tokens = [{'text': token.text, 'pos': token.pos_} for token in doc]
+
+    tokens = []
+
+    for token in doc:
+        token_info = {'text': token.text, 'pos': token.pos_}
+        tokens.append(token_info)
+
     return tokens
 
 if __name__ == "__main__":
