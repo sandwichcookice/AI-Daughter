@@ -1,0 +1,17 @@
+{
+
+  "scripts": {
+
+    "start": "node index.js"
+
+  }, 
+
+  "name": "daughter",
+  "version": "0.1.0",
+  "description": "n/a",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "python-shell": "^5.0.0"
+  }
+}
